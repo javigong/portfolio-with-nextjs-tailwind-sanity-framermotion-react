@@ -20,7 +20,7 @@ const Hero = (props: Props) => {
   });
   return (
     <>
-      <div className="h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden">
+      <div className="h-screen flex flex-col space-y-10 items-center justify-center text-center overflow-hidden">
         <BackgroundCircles />
         <Image
           className="relative rounded-full h-32 w-32 mx-auto object-cover"
