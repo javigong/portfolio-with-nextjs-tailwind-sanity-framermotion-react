@@ -28,8 +28,9 @@ const About = (props: Props) => {
         viewport={{ once: true }}
       >
         <Image
+          className="rounded-full object-cover md:rounded-lg md:w-64 md:h-64 xl:w-[500px] xl:h-[500px]"
           src="https://avatars.githubusercontent.com/u/42308135?v=4"
-          alt="Javier Gongora"
+          alt="Javier Gongora'"
           width={128 * 3}
           height={128 * 3}
         />
