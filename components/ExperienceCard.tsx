@@ -73,9 +73,6 @@ const ExperienceCard = (props: Props) => {
         <ul className="list-disc space-y-4 ml-5 text-lg">
           <li>Summary points Summary points Summary points Summary points</li>
           <li>Summary points Summary points Summary points Summary points</li>
-          <li>Summary points Summary points Summary points Summary points</li>
-          <li>Summary points Summary points Summary points Summary points</li>
-          <li>Summary points Summary points Summary points Summary points</li>
         </ul>
       </div>
     </article>
