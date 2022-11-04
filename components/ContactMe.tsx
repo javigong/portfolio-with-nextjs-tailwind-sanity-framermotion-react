@@ -33,18 +33,10 @@ const ContactMe = (props: Props) => {
           <span className="font-bold">Lets Talk.</span>
         </h4>
 
-        <div className="space-y-10">
-          <div className="flex items-center space-x-5 justify-center">
-            <PhoneIcon className="text-green-400 h-7 w-7 animate-pulse" />
-            <p className="text-2xl">+1234567890</p>
-          </div>
-          <div className="flex items-center space-x-5 justify-center">
-            <EnvelopeIcon className="text-green-400 h-7 w-7 animate-pulse" />
-            <p className="text-2xl">email@gmail.com</p>
-          </div>
+        <div className="space-y-4">
           <div className="flex items-center space-x-5 justify-center">
             <MapPinIcon className="text-green-400 h-7 w-7 animate-pulse" />
-            <p className="text-2xl">123 Developer Ave</p>
+            <p className="text-l">Greater Vancouver, BC</p>
           </div>
         </div>
 
