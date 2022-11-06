@@ -1,10 +1,13 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { SocialIcon } from "react-social-icons";
+import { Social } from "../typings";
 
-type Props = {};
+type Props = {
+  socials: Social[];
+};
 
-const Header = (props: Props) => {
+const Header = ({ socials }: Props) => {
   return (
     <>
       <header className=" sticky top-0 p-5 flex items-start justify-between max-w-7xl mx-auto z-20 xl:items-center">
@@ -24,25 +27,15 @@ const Header = (props: Props) => {
             },
           }}
         >
-          {/* Social Icons */}
-          <SocialIcon
-            url=""
-            fgColor="black"
-            bgColor="transparent"
-            network="linkedin"
-          />
-          <SocialIcon
-            url=""
-            fgColor="black"
-            bgColor="transparent"
-            network="github"
-          />
-          <SocialIcon
-            url=""
-            fgColor="black"
-            bgColor="transparent"
-            network="twitter"
-          />
+          {socials.map((social) => (
+            <SocialIcon
+              key={social._id}
+              url={social.url}
+              fgColor="black"
+              bgColor="transparent"
+              network={social.title}
+            />
+          ))}
         </motion.div>
 
         <motion.div
