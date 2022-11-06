@@ -1,9 +1,13 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { urlFor } from "../sanity";
+import { PageInfo } from "../typings";
 
-type Props = {};
+type Props = {
+  pageInfo: PageInfo;
+};
 
-const About = (props: Props) => {
+const About = ({ pageInfo }: Props) => {
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -29,7 +33,7 @@ const About = (props: Props) => {
       >
         <Image
           className="rounded-full object-cover md:rounded-lg md:w-64 md:h-64 xl:w-[500px] xl:h-[500px]"
-          src="https://avatars.githubusercontent.com/u/42308135?v=4"
+          src={urlFor(pageInfo?.profilePic).url()}
           alt="Javier Gongora'"
           width={128 * 3}
           height={128 * 3}
@@ -38,19 +42,7 @@ const About = (props: Props) => {
 
       <div className="space-y-10 px-0 md:px-10">
         <h4 className="text-4xl font-semibold">Here is a little background</h4>
-        <p className="text-base">
-          Hi there! My name is Javier, and I enjoy creating web and mobile
-          applications. I alway being curious about coding and how it allowed us
-          to solve complex problems. After finishing my degree I started using
-          WordPress with LMS platforms, and started to discover HTML, CSS, PHP
-          and JavaScript capabilities to improve the users experience. My
-          interest in web development became stronger after moving to Vancouver
-          where I found a perfect context to pursue my passion. Along my
-          Canadian journey I took a two-year Post-Degree Diploma in Web and
-          Mobile App Development at Langara College. This program gave me
-          experience developing real-world projects from concept to deployment,
-          and being surrounded by passionate developers and designers.
-        </p>
+        <p className="text-base">{pageInfo?.backgroundInformation}</p>
       </div>
     </motion.div>
   );
