@@ -24,12 +24,13 @@ type Props = {
 };
 
 const Home = ({ pageInfo, experiences, skills, projects, socials }: Props) => {
+  
   return (
     <div className="bg-[#ede8e824] text-black h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-0 scrollbar scrollbar-track-[#ede8e824] scrollbar-thumb-green-500/30 scroll-smooth">
       <Head>
         <title>Javier's Portfolio</title>
       </Head>
-      
+
       <Header socials={socials} />
 
       <section id="hero" className="snap-start">
