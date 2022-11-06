@@ -22,11 +22,6 @@ export interface PageInfo extends SanityBody {
   heroImage: Image;
   name: string;
   profilePic: Image;
-  socials: {
-    _type: "social";
-    title: string;
-    url: string;
-  };
 }
 
 export interface Technology extends SanityBody {
